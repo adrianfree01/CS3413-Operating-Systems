@@ -1,0 +1,40 @@
+    1  history
+    2  exec rm "$HISTFILE\n"
+    3  ls
+    4  pwd
+    5  cd Desktop
+    6  ls
+    7  cd OS-Labs
+    8  mkdir Lab\ 1
+    9  cd Lab\ 1
+   10  pwd
+   11  cd ..
+   12  pwd
+   13  ls
+   14  rm Lab\ 1
+   15  rm -r Lab\ 1
+   16  mkdir lab1
+   17  mv lab1 Lab1
+   18  cd Lab1
+   19  touch test.c
+   20  nvim test.c
+   21  gcc -Wall -Werror test.c
+   22  echo Hello world > input.txt
+   23  echo Hello planet >> input.txt
+   24  cat input.txt
+   25  ech Hello > correct_output.txt
+   26  echo Hello > correct_output.txt
+   27  echo Hello world > incorrect_output.txt
+   28  ./a.out < input.txt
+   29  ./a.out < input.txt > output.txt
+   30  cat output.txt
+   31  diff correct_output.txt output.txt
+   32  diff correct_output.txt incorrect_output.txt
+   33  history | tail -n 20 > script.sh
+   34  cat script.sh
+   35  nvim script.sh
+   36  nvim tmp.txt
+   37  cat tmp.txt script.sh > compile_script.sh
+   38  ./compile_script.sh
+   39  chmod +x compile_script.sh
+   40  ./compile_script.sh

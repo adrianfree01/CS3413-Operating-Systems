@@ -1,0 +1,26 @@
+(18277) Please input your shell command:
+addnumbers
+(18277)Please input number, (0) to terminate
+1
+(18277)Please input number, (0) to terminate
+2
+(18277)Please input number, (0) to terminate
+3
+(18277)Please input number, (0) to terminate
+4
+(18277)Please input number, (0) to terminate
+0
+(18277)The sum is 10
+(18277) Please input your shell command:
+exec
+(18277) Please input exec subcommand
+ls
+-a
+;
+.  ..  a.out  solution.c
+(18277) Please input your shell command:
+onechild
+(18277) Hello, I am a parent process
+(18473) Hello, I am a child process
+(18277) Please input your shell command:
+stop

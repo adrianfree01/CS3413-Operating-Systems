@@ -1,0 +1,42 @@
+(598) Please input your shell command:
+processtree 
+(598) Please input the integer
+3
+(620) I am a child of 619, number is is 0
+(619) I am a child of 618, number is is 1
+(621) I am a child of 618, number is is 2
+(618) I am a child of 598, number is is 3
+(623) I am a child of 622, number is is 4
+(622) I am a child of 598, number is is 5
+(624) I am a child of 598, number is is 6
+(598) I am a child of 339, number is is 7
+(598) Please input your shell command:
+processtree 
+(598) Please input the integer
+2
+(651) I am a child of 650, number is is 0
+(650) I am a child of 598, number is is 1
+(652) I am a child of 598, number is is 2
+(598) I am a child of 339, number is is 3
+(598) Please input your shell command:
+processtree  
+										(598) Please input the integer
+										4
+										(769) I am a child of 768, number is is 0
+										(768) I am a child of 767, number is is 1
+										(770) I am a child of 767, number is is 2
+										(767) I am a child of 766, number is is 3
+										(772) I am a child of 771, number is is 4
+										(771) I am a child of 766, number is is 5
+										(773) I am a child of 766, number is is 6
+										(766) I am a child of 598, number is is 7
+										(776) I am a child of 775, number is is 8
+										(775) I am a child of 774, number is is 9
+										(777) I am a child of 774, number is is 10
+										(774) I am a child of 598, number is is 11
+										(779) I am a child of 778, number is is 12
+										(778) I am a child of 598, number is is 13
+										(780) I am a child of 598, number is is 14
+										(598) I am a child of 339, number is is 15
+										(598) Please input your shell command:
+										stop
