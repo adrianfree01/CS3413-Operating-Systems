@@ -1,8 +1,58 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <semaphore.h>
-#include <pthread.h>
+#include "definitions.h"
+
+int main()
+{
+	node* input = NULL;
+	node* schedule = NULL;
+	node* summary = NULL;
+
+	int choice = 0;
+	while(choice != 2)
+		printf("Enter 1 to create a new job\nEnter 2 to run the created jobs\n");
+		scanf("%d", &choice);
+		switch(choice)
+		{
+			case 1:
+
+				char* username = (char *)malloc(100 * sizeof(char));
+				printf("Username: ");
+				scanf("%100s\n", username);
+
+				char jobID;
+				printf("Job ID: ");
+				scanf("%c\n", &jobID);
+
+				int arrivalTime;
+				printf("Arrival Time: ");
+				scanf("%d\n", &arrivalTime);
+
+				int duration;
+				printf("Duration: ");
+				scanf("%d\n", &duration);
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 Assignment 4
