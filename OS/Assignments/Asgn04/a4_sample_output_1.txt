@@ -17,6 +17,6 @@ Time Job
 16	-
 
 Summary
-Jim	8
+Jim		8
 Mary	13
-Sue	15
+Sue		15

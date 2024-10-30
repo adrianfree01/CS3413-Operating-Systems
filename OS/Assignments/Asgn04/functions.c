@@ -1,22 +1,22 @@
 #include "definitions.h"
 
-node* createNode(char* username, char jobID, int arrivalTime, int duration) //create a node
+node* createNode(char* username, char jobID, int arrivalTime, int duration)
 {
 
-    node* newNode = malloc(sizeof(node)); //allocate memory for the new node
-    if (newNode == NULL) //if the memory allocation fails...
+    node* newNode = malloc(sizeof(node));
+    if (newNode == NULL)
     {
         fprintf(stderr, "Error: Memory allocation failed.\n");
         exit(EXIT_FAILURE);
     }
 
-    newNode->next = NULL; //this node is currently on its own, doesn't point to any other nodes
+    newNode->next = NULL;
     newNode->prev = NULL;
     
-    newNode->user = malloc(strlen(username) + 1); //duplicate the string input, so that if the input is changed
-                                                //it doesnt effect the node
+    newNode->user = malloc(strlen(username) + 1);
+                                                
                                    
-    if(newNode->user == NULL) //if the memory allocation fails
+    if(newNode->user == NULL)
     {
         fprintf(stderr, "Error: Memory allocation failed for data.\n");
         free(newNode);
@@ -30,86 +30,165 @@ node* createNode(char* username, char jobID, int arrivalTime, int duration) //cr
 }
 
 
+void enqueueSummary(node** head, char* username, int finalTime)
+{
+    node* temp = *head;
+    
+    while (temp != NULL && strcmp(temp->user, username) != 0)
+        temp = temp->next;
+    
+
+    if (temp != NULL)
+    {
+        temp->dur = finalTime;
+
+        if (temp->prev != NULL)
+            temp->prev->next = temp->next;
+        else
+            *head = temp->next;
+        
+        if (temp->next != NULL)
+            temp->next->prev = temp->prev;
+
+        node* newPos = *head;
+        node* prev = NULL;
+
+        while (newPos != NULL && newPos->dur <= finalTime)
+        {
+            prev = newPos;
+            newPos = newPos->next;
+        }
+
+        if (prev == NULL)
+        {
+            temp->next = *head;
+            temp->prev = NULL;
+            if (*head != NULL)
+                (*head)->prev = temp;
+            *head = temp;
+        }
+        else
+        {
+            temp->next = newPos;
+            temp->prev = prev;
+            prev->next = temp;
+            if (newPos != NULL)
+                newPos->prev = temp;
+        }
+    }
+    else
+    {
+        node* newNode = createNode(username, ' ', 0, finalTime);
+        if (*head == NULL)
+        {
+            *head = newNode;
+        }
+        else
+        {
+            node* current = *head;
+            node* previous = NULL;
+
+            while (current != NULL && current->dur <= finalTime)
+            {
+                previous = current;
+                current = current->next;
+            }
+
+            if (previous == NULL)
+            {
+                newNode->next = *head;
+                (*head)->prev = newNode;
+                *head = newNode;
+            }
+            else
+            {
+                newNode->next = current;
+                newNode->prev = previous;
+                previous->next = newNode;
+                if (current != NULL)
+                    current->prev = newNode;
+            }
+        }
+    }
+}
+
 void enqueue(node** head, char* username, char jobID, int arrivalTime, int duration)
 {
-    node* newNode = createNode(username, jobID, arrivalTime, duration); //create a new node
+    node* newNode = createNode(username, jobID, arrivalTime, duration);
 
-    if(*head == NULL) //if the list is empty
-        *head = newNode; //the new node becomes the head
-    else //if the list isn't empty
+    if(*head == NULL)
+        *head = newNode;
+    else
     {
-        node* temp = *head; //make a node that starts at head
+        node* temp = *head;
 
-        while(temp->next != NULL) //while the node isn't the last node
-            temp = temp->next; //move over by one node
+        while(temp->next != NULL)
+            temp = temp->next;
 
-        temp->next = newNode; //set the last node to be the new node
-        newNode->prev = temp; //point to the 2nd last node from the last node
+        temp->next = newNode;
+        newNode->prev = temp;
     }
 }
 
 void dequeue(node** head)
 {
     node* temp = *head;
+
+    if(temp == NULL)
+        return;
+
     if(temp->next == NULL)
     {
+        *head = NULL;
         free(temp->user);
-        free(temp->job);
-        free(temp->arrive);
-        free(temp->dur);
         free(temp);
         return;
     }
     else
     {
         *head = temp->next;
-        free(temp->username);
-        free(temp->job);
-        free(temp->arrive);
-        free(temp->dur);
+        free(temp->user);
         free(temp);
-        return;
     }
 
 }
 
 void deleteNode(node** head, char jobID)
 {
-    node* temp = *head; //start at head
-    while(temp != NULL) //do this until we have iterated through the entire list
+    node* temp = *head;
+    while(temp != NULL)
     {
-        if(temp->job == jobID)//if the data of the current node is the same as the input
+        if(temp->job == jobID)
         {
-            if(temp->prev != NULL) //if we are not at the head
-                temp->prev->next = temp->next; //set the previous node's next pointer to the next node
+            if(temp->prev != NULL)
+                temp->prev->next = temp->next; 
             else
-                *head = temp->next; //set the next node to be head
+                *head = temp->next;
             
-            if(temp->next != NULL) //if we are not at the end of the node
-                temp->next->prev = temp->prev; //set the next node's previous pointer to be the previous node
+            if(temp->next != NULL)
+                temp->next->prev = temp->prev; 
             
-            free(temp->username);
-            free(temp->job);
-            free(temp->arrive);
-            free(temp->dur);
+            free(temp->user);
             free(temp);
             return;
         }
-        temp = temp->next; //move to the next node
+        temp = temp->next;
     }
 }
 
 int hasItem(node* head, char* username)
 {
-    node* temp = head; //node at start of the list
-    while(temp != NULL) //do this until we have iterated through the full list
+    node* temp = head;
+    while(temp != NULL)
     {
-        if(strcmp(temp->user, username) == 0) //is the data of the current node the same as the input
-            return 1; //match found
-        temp = temp->next; //check next node
+        if(strcmp(temp->user, username) == 0)
+            return 1;
+        temp = temp->next;
     }
-    return 0; //no match
+    return 0;
 }
+
+
 
 void print(node* head)
 {
@@ -117,7 +196,19 @@ void print(node* head)
     
     while(temp != NULL)
     {
-        printf("%s\n", temp->data);
+        printf("| %s | %c | %d | %d |\n", temp->user, temp->job, temp->arrive, temp->dur);
+
+        temp = temp->next;
+    }
+}
+
+void printSummary(node* head)
+{
+    node* temp = head;
+    printf("\nSUMMARY\n");
+    while(temp != NULL)
+    {
+        printf("| %s | %d |\n", temp->user, temp->dur);
         temp = temp->next;
     }
 }
@@ -129,7 +220,7 @@ int stop(node** head)
     while(temp != NULL)
     {
         next = temp->next;
-        free(temp->data);
+        free(temp->user);
         free(temp);
         temp = next;
     }
