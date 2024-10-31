@@ -1,0 +1,7 @@
+1
+User	Process	Arrival	Duration Affinity
+Jim	A	2	5	0
+Mary	B	2	3	0
+Sue	C	5	5	0
+Mary	D	6	2	0
+
