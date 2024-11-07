@@ -1,0 +1,33 @@
+2
+User	Process		Arrival		Duration 	Affinity
+Jim		A			2			5			0
+Mary	B			2			3			0
+Jerry	E			3			10			1
+Sue		C			5			5			0
+Mary	D			6			2			0
+______________________________________________________
+Time	CPU0	CPU1
+1		-		-
+2		B		-
+3		B		E
+4		B		E
+5		A		E
+6		D		E
+7		D		E
+8		A		E
+9		A		E
+10		A		E
+11		A		E
+12		C		E
+13		C		-
+14		C		-
+15		C		-
+16		C		-
+17		-		-
+
+Summary
+Jim		11
+Mary	7
+Jerry	12
+Sue		16
+
