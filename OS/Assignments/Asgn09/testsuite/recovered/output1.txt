@@ -1,0 +1,14 @@
+This is a PNG file.
+Chunk Type: IHDR, Length: 13
+CRC verified for chunk IHDR.
+Chunk Type: sRGB, Length: 1
+CRC verified for chunk sRGB.
+Chunk Type: gAMA, Length: 4
+CRC verified for chunk gAMA.
+Chunk Type: pHYs, Length: 9
+CRC verified for chunk pHYs.
+Chunk Type: IDAT, Length: 18944
+CRC verified for chunk IDAT.
+Chunk Type: IEND, Length: 0
+CRC verified for chunk IEND.
+End of PNG file reached.

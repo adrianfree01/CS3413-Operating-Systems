@@ -1,0 +1,396 @@
+It's a PNG file
+Found unknown: IHDR
+Chunk size is:13
+Found unknown: iCCP
+Chunk size is:386
+Found unknown: pHYs
+Chunk size is:9
+Found unknown: tEXt
+Chunk size is:17
+Found unknown: tEXt
+Chunk size is:22
+Found unknown: tIME
+Chunk size is:7
+Found unknown: tEXt
+Chunk size is:32
+Found unknown: tEXt
+Chunk size is:33
+Found IDAT
+Chunk size is:64905
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Chunk is corrupted!
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:65524
+Found IDAT
+Chunk size is:26600
+Found IEND
+Chunk size is:0

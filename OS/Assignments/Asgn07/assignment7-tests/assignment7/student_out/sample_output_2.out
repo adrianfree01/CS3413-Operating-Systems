@@ -1,0 +1,14 @@
+Logical addresses -> Physical addresses:
+1124955998 -> 1886
+794845611 -> 2475
+1540976830 -> 4286
+1124957700 -> 1540
+1081961846 -> 3446
+794845440 -> 4352
+1540976645 -> 5
+
+Stats:
+major page faults = 7
+page hits = 0
+pages swapped out = 3
+Memory used for paging structure 36864, memory used by the process pages 12288, percentage of useful memory w.r.t the total memory occupied by paging structures and data 25.00
