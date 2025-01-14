@@ -1,6 +1,6 @@
 #include "definitions.h"
 
-node* createNode(char* username, char jobID, int arrivalTime, int duration)
+node* createNode(char* username, char jobID, int arrivalTime, int duration, int affinity)
 {
 
     node* newNode = malloc(sizeof(node));
@@ -26,6 +26,7 @@ node* createNode(char* username, char jobID, int arrivalTime, int duration)
     newNode->job = jobID;
     newNode->arrive = arrivalTime;
     newNode->dur = duration;
+    newNode->aff = affinity;
     return newNode;
 }
 
@@ -78,7 +79,7 @@ void enqueueSummary(node** head, char* username, int finalTime)
     }
     else
     {
-        node* newNode = createNode(username, ' ', 0, finalTime);
+        node* newNode = createNode(username, ' ', 0, finalTime, 0);
         if (*head == NULL)
         {
             *head = newNode;
@@ -112,9 +113,9 @@ void enqueueSummary(node** head, char* username, int finalTime)
     }
 }
 
-void enqueue(node** head, char* username, char jobID, int arrivalTime, int duration)
+void enqueue(node** head, char* username, char jobID, int arrivalTime, int duration, int affinity)
 {
-    node* newNode = createNode(username, jobID, arrivalTime, duration);
+    node* newNode = createNode(username, jobID, arrivalTime, duration, affinity);
 
     if(*head == NULL)
         *head = newNode;
@@ -188,15 +189,13 @@ int hasItem(node* head, char* username)
     return 0;
 }
 
-
-
 void print(node* head)
 {
     node* temp = head;
     
     while(temp != NULL)
     {
-        printf("| %s | %c | %d | %d |\n", temp->user, temp->job, temp->arrive, temp->dur);
+        printf("| %s | %c | %d | %d | %d |\n", temp->user, temp->job, temp->arrive, temp->dur, temp->aff);
 
         temp = temp->next;
     }

@@ -1,0 +1,14 @@
+It's a PNG file
+Found unknown: IHDR
+Chunk size is:13
+Found unknown: sRGB
+Chunk size is:1
+Found unknown: gAMA
+Chunk size is:4
+Found unknown: pHYs
+Chunk size is:9
+Chunk is corrupted!
+Found IDAT
+Chunk size is:18944
+Found IEND
+Chunk size is:0

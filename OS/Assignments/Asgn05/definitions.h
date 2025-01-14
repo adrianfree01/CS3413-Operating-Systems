@@ -5,7 +5,6 @@
 #include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
-#include <time.h>
 
 typedef struct node
 {
@@ -15,17 +14,18 @@ typedef struct node
     char job;
     int arrive;
     int dur;
+    int aff;
 } node;
 
-node* createNode(char*, char, int, int);
+node* createNode(char*, char, int, int, int);
 
 void enqueueSummary(node**, char*, int);
 
-void enqueue(node**, char*, char, int, int); //Add an element to the end of the list
+void enqueue(node**, char*, char, int, int, int); //Add an element to the end of the list
 
 void dequeue(node**); //Removes the first element in the list
-                             
-void deleteNode(node**, char); //Remove the first occurence of the element given from the list
+
+void deleteNode(node**, char);
                                                      
 int hasItem(node*, char*); //returns a 0 or 1, depending on the presence of the given char* in the list
                             

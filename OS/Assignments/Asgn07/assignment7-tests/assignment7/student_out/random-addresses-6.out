@@ -1,0 +1,42 @@
+Logical addresses -> Physical addresses:
+1823 -> 1823
+6572 -> 2476
+6797 -> 2701
+5617 -> 5617
+2192 -> 6288
+8351 -> 8351
+2355 -> 6451
+3257 -> 7353
+2220 -> 6316
+131 -> 131
+8718 -> 8718
+8649 -> 8649
+11742 -> 11742
+2280 -> 6376
+4257 -> 4257
+3172 -> 7268
+8680 -> 8680
+8520 -> 8520
+11145 -> 11145
+7609 -> 3513
+9015 -> 9015
+6150 -> 2054
+10562 -> 10562
+5807 -> 5807
+8962 -> 8962
+11961 -> 11961
+664 -> 664
+4518 -> 4518
+2984 -> 7080
+11090 -> 11090
+5096 -> 5096
+10073 -> 10073
+7724 -> 3628
+9840 -> 9840
+3308 -> 7404
+
+Stats:
+major page faults = 6
+page hits = 29
+pages swapped out = 0
+Memory used for paging structure 12288, memory used by the process pages 12288, percentage of useful memory w.r.t the total memory occupied by paging structures and data 50.00

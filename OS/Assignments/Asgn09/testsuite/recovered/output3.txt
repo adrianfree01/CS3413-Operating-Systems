@@ -1,0 +1,365 @@
+This is a PNG file.
+Chunk Type: IHDR, Length: 13
+CRC verified for chunk IHDR.
+Chunk Type: sRGB, Length: 1
+CRC verified for chunk sRGB.
+Chunk Type: gAMA, Length: 4
+CRC verified for chunk gAMA.
+Chunk Type: pHYs, Length: 9
+CRC verified for chunk pHYs.
+Chunk Type: tEXt, Length: 15
+CRC verified for chunk tEXt.
+Chunk Type: tIME, Length: 7
+CRC verified for chunk tIME.
+Chunk Type: tEXt, Length: 32
+CRC verified for chunk tEXt.
+Chunk Type: tEXt, Length: 33
+CRC verified for chunk tEXt.
+Chunk Type: IDAT, Length: 65310
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 65524
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IDAT, Length: 17176
+CRC mismatch for chunk IDAT.
+Successfully corrected IDAT chunk.
+Chunk Type: IEND, Length: 0
+CRC verified for chunk IEND.
+End of PNG file reached.

@@ -1,174 +1,230 @@
 #include "definitions.h"
 
-int main()
-{
-    node* input = NULL;
-    node* schedule = NULL;
-    node* summary = NULL;
+int CPUs;
+int finishedCPUs = 0;
+int currentTime = 1;  
+pthread_mutex_t mutex;
+sem_t *sems;
+sem_t printSem;
+node *inputQueue = NULL;
+node **cpuQueues;
+char *sharedBuffer;
+int *quantums;  
+node *summary = NULL;
 
-    int choice = 0;
-    int roundLength;
-    printf("Enter the max time a round can last: ");
-    scanf("%d", &roundLength);
-    int maxCPUs;
-    printf("Enter the maximum amount of CPUs you would like to use: ");
-    scanf("%d", &maxCPUs);
-    int shared_buffer[maxCPUs];
-
-    pthread_mutex_t queueMutex;
-    sem_t bufferReady;
-    sem_t printReady;
-
-
-
-    while(choice != 3)
-    {
-        printf("\nEnter 1 to create a new job\nEnter 2 to run the created jobs\nEnter 3 to exit without running jobs\n");
-        scanf("%d", &choice);
-        switch(choice)
-        {
-            case 1:
-                char* username = (char *)malloc(100 * sizeof(char));
-                printf("Username: ");
-                scanf(" %100s", username);
-
-                char jobID;
-                printf("Job ID: ");
-                scanf(" %c", &jobID);
-
-                int arrivalTime;
-                printf("Arrival Time: ");
-                scanf(" %d", &arrivalTime);
-
-                int duration;
-                printf("Duration: ");
-                scanf(" %d", &duration);
-                enqueue(&input, username, jobID, arrivalTime, duration);
-                break;
-
-            case 2:
-                int timeQuantum = 1;
-                int currentJobRoundLength = roundLength;
-
-                while(schedule != NULL || input != NULL)
-                {
-                    node* temp = input;
-                    while(temp != NULL)
-                    {
-                        if(timeQuantum == temp->arrive)
-                        {
-                            enqueue(&schedule, temp->user, temp->job, temp->arrive, temp->dur);
-                            node* nextNode = temp->next;
-                            deleteNode(&input, temp->job);
-                            temp = nextNode;
-
-                        }
-                        else
-                            temp = temp->next;
-                    }
-
-                    node* currentJob = schedule;
-
-                    if(currentJob != NULL)
-                    {
-                        if(currentJobRoundLength > 0 && currentJob->dur > 0)
-                        {
-                            currentJobRoundLength--;
-                            currentJob->dur--;
-                            printf("| %d | %c |\n", timeQuantum, currentJob->job);
-                        }
-                        if(currentJob->dur == 0)
-                        {
-                            enqueueSummary(&summary, currentJob->user, timeQuantum);
-                            dequeue(&schedule);
-                            currentJobRoundLength = roundLength;
-                        }
-                        else if(currentJobRoundLength == 0)
-                        {
-                            enqueue(&schedule, currentJob->user, currentJob->job, currentJob->arrive, currentJob->dur);
-                            dequeue(&schedule);
-                            currentJobRoundLength = roundLength;
-                        }
-                        
-                    }
-                    else
-                        printf("| %d | - |\n", timeQuantum); 
-
-                    timeQuantum++;  
-                }
-
-                printSummary(summary);
-                stop(&input);
-                stop(&schedule);
-                stop(&summary);
-                return 0;
-
-            case 3:
-                stop(&input);
-                stop(&schedule);
-                stop(&summary);
-                return 0;
+void addToSchedule(node** inputHead, node** scheduleHead, int timeQuantum) {
+    node* temp = *inputHead;
+    while(temp != NULL) {
+        if(timeQuantum == temp->arrive) {
+            enqueue(scheduleHead, temp->user, temp->job, temp->arrive, temp->dur, temp->aff);
+            node* nextNode = temp->next;
+            deleteNode(inputHead, temp->job);
+            temp = nextNode;
+        } else {
+            temp = temp->next;
         }
     }
 }
 
-/*
-*   Task
-*       In this assignment you’re to extend your simulation of the Round Robin
-*       scheduling algorithm with multiple threads. The threads are to simulate 
-*       multiple CPUs having their own schedules. To assign a job to a CPU, you need to
-*       use the processor affinity - a new field in a job’s description.
-*
-*   Requirements
-*       First, your program should read the number of CPUs. After that, your program
-*       should read the inputs, very similar to the previous assignment, except there’s a
-*       new field: Affinity. This field is represented by an integer value and corresponds
-*       to the ID of the (simulated) CPU, which should be executing the job. The jobs
-*       with affinity 0 can only be executed by the CPU0, the Jobs with affinity 1 can
-*       only be executed by the CPU1, etc.
-*
-*       Your program should have three kinds of threads:
-*           The main thread, which has several responsibilities:
-*               Reading the input
-*               Creating the CPU threads and a printing thread
-*               Printing the summary
-*
-*           CPU thread(s) - threads that simulate one core of CPU each. You will
-*       need to make your entire simulation from the previous assignment solution
-*       to run as a separate thread, using pthread_create(). The number of the
-*       threads should correspond to the number of the CPU cores, which is a
-*       user input. Each of the CPUs can have a local running queue, but should
-*       compete for access to the “input queue” with another CPUs. Every unit
-*       of time within the simulation, the CPUs should send the jobs they were
-*       executing to a buffer shared with the printing thread.
-*
-*           Finally, your program should have a printing thread, also created using
-*       pthread_create. The thread will be executing a function that is responsible
-*       for printing the time and jobs currently performed by each CPU. This
-*       function should wait for all CPU threads to finish simulating one unit of
-*       execution, and print the contents of the shared buffer, populated by the
-*       CPUs. After that, the printing thread should signal the CPU threads
-*       that they can resume their simulations. Importantly, this thread should
-*       be created before the CPU threads.
-*       Finally, a summary should be printed following the same rules as in the
-*       previous assignment.
-*
-*   Limitations
-*       For this exercise, you are prohibited from allocating a 2d array that would store
-*       history of CPU states. The shared buffer (can be a global variable) should be
-*       only big enough to hold one character per CPU. You are to use semaphores and
-*       mutexes, not pipes. Solutions using busy wait loops will be lightly penalized
-*       for each busy wait loop. Solutions using sleep for synchronization will lightly
-*       be penalized for each sleep statement in the code.
-*
-*   Working solution for the previous assignment
-*       If you did not manage to finish the previous assignment or your design choices
-*       make the change too difficult, instructor’s solution to the previous assignment
-*       will be posted on Thursday (29th of October) evening, 
-*       under Course Content/Misc. useful stuff.
-*
-*   Input/Output format
-*       The assignment will contain two lines before the processes table: the number of
-*       CPUs, and their corresponding quantums. See the attached sample input1.txt
-*       and sample output1.txt for clarifications.
-*/
+node* getJob(node** scheduleHead, int affinity) {
+    node* temp = *scheduleHead;
+    while(temp != NULL) {
+        if(temp->aff == affinity) return temp;
+        temp = temp->next;
+    }
+    return NULL;
+}
+
+void getInputs(node** inputHead) {
+    char* username = (char *)malloc(100 * sizeof(char));
+    printf("Username: ");
+    scanf(" %100s", username);
+
+    char jobID;
+    printf("Job ID: ");
+    scanf(" %c", &jobID);
+
+    int arrivalTime;
+    printf("Arrival Time: ");
+    scanf(" %d", &arrivalTime);
+
+    int duration;
+    printf("Duration: ");
+    scanf(" %d", &duration);
+
+    int affinity;
+    printf("Affinity: ");
+    scanf(" %d", &affinity);
+
+    enqueue(inputHead, username, jobID, arrivalTime, duration, affinity);
+}
+
+void* simulateCPU(void* arg) {
+    int cpuID = *(int*)arg;
+    int timeQuantum = quantums[cpuID];
+    int currentJobTimeRemaining = timeQuantum;
+    int hasFinished = 0;
+
+    while (1) {
+        sem_wait(&sems[cpuID]);
+        printf("CPU %d acquired semaphore at time %d.\n", cpuID, currentTime);
+
+        pthread_mutex_lock(&mutex);
+        printf("CPU %d checking schedule at time %d.\n", cpuID, currentTime);
+        addToSchedule(&inputQueue, &cpuQueues[cpuID], currentTime);
+        pthread_mutex_unlock(&mutex);
+
+        node* currentJob = getJob(&cpuQueues[cpuID], cpuID);
+
+        if (currentJob != NULL) {
+            currentJobTimeRemaining--;
+            currentJob->dur--;
+
+            pthread_mutex_lock(&mutex);
+            sharedBuffer[cpuID] = currentJob->job;
+            printf("CPU %d is processing job %c at time %d with %d remaining.\n", cpuID, currentJob->job, currentTime, currentJob->dur);
+            pthread_mutex_unlock(&mutex);
+
+            if (currentJob->dur == 0) {
+                enqueueSummary(&summary, currentJob->user, currentTime);
+                dequeue(&cpuQueues[cpuID]);
+                currentJobTimeRemaining = timeQuantum;
+            } else if (currentJobTimeRemaining == 0) {
+                enqueue(&cpuQueues[cpuID], currentJob->user, currentJob->job, currentJob->arrive, currentJob->dur, currentJob->aff);
+                dequeue(&cpuQueues[cpuID]);
+                currentJobTimeRemaining = timeQuantum;
+            }
+        } else {
+            pthread_mutex_lock(&mutex);
+            sharedBuffer[cpuID] = '-';
+            pthread_mutex_unlock(&mutex);
+        }
+
+        sem_post(&printSem);
+        printf("CPU %d posted to printSem at time %d.\n", cpuID, currentTime);
+
+        pthread_mutex_lock(&mutex);
+        if (cpuQueues[cpuID] == NULL && inputQueue == NULL && !hasFinished) {
+            printf("CPU %d has finished all jobs.\n", cpuID);
+            finishedCPUs++;
+            hasFinished = 1;
+        }
+        pthread_mutex_unlock(&mutex);
+
+        if (hasFinished) break;
+    }
+    return NULL;
+}
+
+void* printStatus(void* arg) {
+    while (1) {
+        for (int i = 0; i < CPUs; i++) {
+            sem_wait(&printSem);
+        }
+
+        pthread_mutex_lock(&mutex);
+        printf("Time %d |", currentTime);
+        for (int i = 0; i < CPUs; i++) {
+            printf(" CPU%d: %c |", i, sharedBuffer[i]);
+        }
+        printf("\n");
+        pthread_mutex_unlock(&mutex);
+
+        currentTime++;
+        printf("Advancing to time %d.\n", currentTime);
+
+        for (int i = 0; i < CPUs; i++) {
+            sem_post(&sems[i]);
+        }
+
+        pthread_mutex_lock(&mutex);
+        if (finishedCPUs == CPUs) {
+            printf("All CPUs have finished. Exiting printStatus.\n");
+            pthread_mutex_unlock(&mutex);
+            break;
+        }
+        pthread_mutex_unlock(&mutex);
+    }
+    return NULL;
+}
+
+int main() {
+    printf("Enter the number of CPUs to utilize: ");
+    scanf("%d", &CPUs);
+
+    sems = (sem_t*) malloc(CPUs * sizeof(sem_t));
+    for(int i = 0; i < CPUs; i++)
+        sem_init(&sems[i], 0, 0);
+    sem_init(&printSem, 0, 0);
+
+    pthread_mutex_init(&mutex, NULL);
+
+    cpuQueues = (node**) malloc(CPUs * sizeof(node*));
+    for(int i = 0; i < CPUs; i++)
+        cpuQueues[i] = NULL;
+
+    sharedBuffer = (char*) malloc(CPUs * sizeof(char));
+    for(int i = 0; i < CPUs; i++)
+        sharedBuffer[i] = '-';
+
+    quantums = (int*) malloc(CPUs * sizeof(int));
+    for(int i = 0; i < CPUs; i++) {
+        printf("Enter the quantum for CPU %d: ", i);
+        scanf(" %d", &quantums[i]);
+    }
+
+    int choice = 0;
+    while(choice != 3) {
+        printf("\nEnter 1 to create a new job\nEnter 2 to run the created jobs\nEnter 3 to exit without running jobs\n");
+        scanf("%d", &choice);
+        switch(choice) {
+            case 1:
+                getInputs(&inputQueue);
+                break;
+
+            case 2: {
+                pthread_t cpuThreads[CPUs];
+                pthread_t printThread;
+
+                pthread_create(&printThread, NULL, printStatus, NULL);
+
+                int cpuIDs[CPUs];
+                for (int i = 0; i < CPUs; i++) {
+                    cpuIDs[i] = i;
+                    pthread_create(&cpuThreads[i], NULL, simulateCPU, &cpuIDs[i]);
+                }
+
+                pthread_join(printThread, NULL);
+                for (int i = 0; i < CPUs; i++) 
+                    pthread_join(cpuThreads[i], NULL);
+                
+                printSummary(summary);
+
+                stop(&inputQueue);
+                stop(&summary);
+                for (int i = 0; i < CPUs; i++) 
+                    sem_destroy(&sems[i]);
+                sem_destroy(&printSem);
+                free(sems);
+                free(cpuQueues);
+                free(sharedBuffer);
+                free(quantums);
+                pthread_mutex_destroy(&mutex);
+                return 0;
+            }
+
+            case 3:
+                stop(&inputQueue);
+                stop(&summary);
+                for (int i = 0; i < CPUs; i++)
+                    sem_destroy(&sems[i]);
+                sem_destroy(&printSem);
+                free(sems);
+                free(cpuQueues);
+                free(sharedBuffer);
+                free(quantums);
+                pthread_mutex_destroy(&mutex);
+                return 0;
+        }
+    }
+}
