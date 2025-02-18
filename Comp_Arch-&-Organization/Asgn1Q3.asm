@@ -15,7 +15,7 @@
 promptInput: .asciiz "Enter a string to calculate its' length: "
 promptOutput: .asciiz "Length: "
 
-input: .word 0
+inputBuffer: .space 100
 
 .text
 main:
@@ -24,22 +24,15 @@ main:
 	syscall
 	
 	li 	$v0, 8
+	la	$a0, inputBuffer
+	li	$a1, 100 # Max Length 99 + null terminator
 	syscall
-	sw 	$v0, input
 	
-	la 	$a0, input
+	la $a0, inputBuffer
+	jal string_length
 	
+	move	$t0, $v0
 	
-string_length:
-	li 	$t0, 0 #int length = 0
-	j 	loop
-
-loop:
-	beqz 	$a0, return
-	addi 	$a0, $a0, 1
-	addi	$t0, $t0, 1
-	j	loop
-return:
 	li	$v0, 4
 	la	$a0, promptOutput
 	syscall
@@ -47,7 +40,25 @@ return:
 	li	$v0, 1
 	move	$a0, $t0
 	syscall
+	
 	j 	exit
+	
+string_length:
+	
+	li 	$t0, 0 #int length = 0
+	move 	$t1, $a0
+
+loop:
+	lb	$t2, 0($t1) #load byte of string
+	beqz 	$t2, return # Check for null terminator
+	beq	$t2, 10, return # Check for newLine character
+	addi 	$t0, $t0, 1 #increment length counter
+	addi	$t1, $t1, 1 #increment string position
+	j	loop
+
+return:
+	move	$v0, $t0 #put string length in v0
+	jr 	$ra # jump back to return address
 
 exit:
 	li 	$v0, 10

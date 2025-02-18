@@ -1,3 +1,15 @@
+#Question 1: Leaf Procedure Implementation (20 Marks)
+#Write a MIPS assembly program to implement the following C function as a leaf
+#procedure:
+#int compute_sum(int a, int b, int c) {
+# int result;
+# result = (a * b) + c;
+# return result;
+#}
+#• Assume a, b, and c are passed in $a0, $a1, and $a2 respectively.
+#• Store the result in $v0.
+#• Ensure proper usage of the stack if needed.
+
 .data
 promptA: .asciiz "Enter int (a): "
 promptB: .asciiz "Enter int (b): "
